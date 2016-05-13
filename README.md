@@ -20,6 +20,6 @@ Worker nodes should have the OS partitions configured as raid and use [LVM](http
 
 This configuration will ensure your worker nodes do not go down because of a failed drive on an OS partition, and enable you to resize partitions as needed.
 
-Specifcially /var/log and /opt tend to fill up pretty rapidly.
+Specifcially /var/log (~200GB) and /opt should be on their own partition tend to fill up pretty rapidly.  You don't want a node to go down due to logging, or parcel download and distribution.
 
 The *data* partitions *SHOULD NOT* be configured as RAID, and *SHOULD NOT* use LVM.  They should be configured as JBOD.  The cluster processes will handle the allocation of blocks, and replication will handle failure and data loss from a failed drive and/or node.

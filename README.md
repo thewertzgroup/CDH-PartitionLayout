@@ -29,3 +29,12 @@ For JBOD partitions, be sure to mount with the noatime option:
 ```
 /dev/sdb1 /data1    ext4    defaults,noatime       0
 ```
+
+<table>
+<tr>
+<th rowspan=2>Role</th> <th rowspan=2>HW</th> <th colspan=5>Roles</th> <th colspan=3>Disk</th> <th rowspan=2>Comment</th>
+</tr>
+<tr>
+  <th>Roles</th> <th>Master</th> <th>Edge</th> <th>Utility</th> <th>DataNode</th> <th>Mount Type</th> <th>Mount Point</th> <th>MB</th>
+</tr>
+</table>

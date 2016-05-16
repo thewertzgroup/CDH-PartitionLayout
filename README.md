@@ -24,7 +24,7 @@ Specifically /var/log (~200GB) and /opt should be on their own partition and ten
 
 The *data* partitions *SHOULD NOT* be configured as RAID, and *SHOULD NOT* use LVM.  They should be configured as JBOD.  The cluster processes will handle the allocation of blocks, and replication will handle failure and data loss from a failed drive and/or node.
 
-For JBOD partitions, be sure to mount with the no atime option:
+For JBOD partitions, be sure to mount with the noatime option:
 
 ```
 /dev/sdb1 /data1    ext4    defaults,noatime       0
